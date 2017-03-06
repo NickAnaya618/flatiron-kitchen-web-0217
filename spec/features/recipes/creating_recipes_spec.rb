@@ -31,9 +31,7 @@ describe "creating recipes" do
       Ingredient.create(name: 'Cider')
 
       visit new_recipe_path
-
       expect(page).to have_css("input[type=\"checkbox\"]", :count => 4)
-
       expect(page).to have_content('Paprika')
       expect(page).to have_content('Clove')
       expect(page).to have_content('Ginger')
